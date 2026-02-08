@@ -161,9 +161,9 @@ Android (Field-first):
 
 ## Release Plan (Checklist)
 
-Status as of 2026-02-07 (local/dev):
+Status as of 2026-02-08 (local/dev):
 
-- [ ] 1. Freeze v0.1 scope and acceptance criteria (what MUST ship vs backlog).
+- [x] 1. Freeze v0.1 scope and acceptance criteria (what MUST ship vs backlog) - See `docs/v0.1_scope_freeze.md`.
 - [x] 2. DB design pass for missing MVP tables (project_members, subcontractors, etc.) and write migrations for MySQL (and SQLite only if still supported).
 - [x] 3. Implement backend API endpoints required by Android MVP (projects, threads/messages, uploads, timesheets).
 - [x] 4. Implement WEB portal modules needed for office usage.

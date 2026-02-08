@@ -1112,4 +1112,14 @@ return {
       { action = "update", path = "changelogs.lua" },
     },
   },
+  {
+    at = "Sat 02/08/2026 01:47",
+    actor = "codex",
+    summary = "Docs: freeze v0.1 scope and acceptance criteria (release gate step 1) - create scope freeze document and mark item complete.",
+    changes = {
+      { action = "add", path = "docs/v0.1_scope_freeze.md" },
+      { action = "update", path = "full_todos.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
 }
