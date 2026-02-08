@@ -109,20 +109,23 @@
 - [ ] Udokumentować użycie DI
 
 ### 4.2 Centralna Walidacja
-- [ ] Utworzyć `src/Validation/Validator.php`
-- [ ] Zaimplementować podstawowe reguły (required, email, min, max)
+- [x] Utworzyć `src/Support/Validator.php`
+- [x] Zaimplementować podstawowe reguły (required, email, min, max, numeric, integer, string, alpha, alphanumeric, url, in, regex)
 - [ ] Dodać custom rules
 - [ ] Refaktoryzować istniejącą walidację w kontrolerach
 - [ ] Dodać testy dla Validator
-- [ ] Udokumentować dostępne reguły
+- [x] Udokumentować dostępne reguły
 
 ### 4.3 Response Helpers
-- [ ] Utworzyć `src/Http/Response.php`
-- [ ] Dodać metodę `json()`
-- [ ] Dodać metodę `error()`
-- [ ] Dodać metodę `success()`
+- [x] Utworzyć `src/Support/Response.php`
+- [x] Dodać metodę `json()`
+- [x] Dodać metodę `error()`
+- [x] Dodać metodę `success()`
+- [x] Dodać metody dla typowych kodów HTTP (notFound, unauthorized, forbidden, validationError, serverError)
+- [x] Dodać metodę `redirect()`
+- [x] Dodać metodę `download()`
 - [ ] Refaktoryzować kontrolery do używania Response
-- [ ] Standaryzować format błędów
+- [x] Standaryzować format błędów
 
 ---
 
