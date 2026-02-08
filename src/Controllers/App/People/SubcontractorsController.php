@@ -37,7 +37,6 @@ final class SubcontractorsController extends Controller
        FROM subcontractors s
        JOIN users u ON u.id = s.user_id';
 
-    $bind['pending'] = 'pending';
     if ($where !== []) {
       $countSql .= ' WHERE ' . implode(' AND ', $where);
       $sql .= ' WHERE ' . implode(' AND ', $where);
@@ -47,6 +46,7 @@ final class SubcontractorsController extends Controller
     $total = (int)($totalRow['c'] ?? 0);
     $sql .= ' ORDER BY s.id DESC LIMIT ' . $perPage . ' OFFSET ' . $offset;
 
+    $bind['pending'] = 'pending';
     $rows = $this->ctx->db()->fetchAll($sql, $bind);
 
     return $this->page('app/people_subcontractors', [
