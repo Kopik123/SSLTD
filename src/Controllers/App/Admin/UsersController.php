@@ -167,7 +167,7 @@ final class UsersController extends Controller
   }
 
   /** @param array<string, mixed> $meta */
-  private function audit(int $actorId, string $action, string $entityType, ?int $entityId, array $meta): void
+  protected function audit(int $actorId, string $action, string $entityType, ?int $entityId, array $meta): void
   {
     $this->ctx->db()->insert(
       'INSERT INTO audit_log (actor_user_id, action, entity_type, entity_id, meta_json, created_at)
