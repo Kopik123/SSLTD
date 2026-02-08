@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+!.env.staging.example
+
+storage/logs/*.log
+storage/tmp/
+
+android/.gradle/
+android/**/build/
+
