@@ -1153,4 +1153,16 @@ return {
       { action = "update", path = "changelogs.lua" },
     },
   },
+  {
+    at = "Sat 02/08/2026 13:24",
+    actor = "codex",
+    summary = "Core: implement centralized ErrorHandler with structured logging and log rotation.",
+    changes = {
+      { action = "add", path = "src/ErrorHandler.php" },
+      { action = "add", path = "bin/rotate_logs.php" },
+      { action = "update", path = "index.php" },
+      { action = "update", path = "todos_list2.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
 }

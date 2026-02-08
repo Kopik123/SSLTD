@@ -27,13 +27,13 @@
 - [ ] Skonfigurować automatyczne deployment (opcjonalnie)
 
 ### 1.3 Brak Centralnego Logowania Błędów
-- [ ] Utworzyć klasę `src/ErrorHandler.php`
-- [ ] Zaimplementować `set_error_handler()`
-- [ ] Zaimplementować `set_exception_handler()`
-- [ ] Zaimplementować `register_shutdown_function()`
-- [ ] Dodać strukturyzowane logowanie JSON
-- [ ] Utworzyć katalog `storage/logs/` (już istnieje)
-- [ ] Dodać rotację logów
+- [x] Utworzyć klasę `src/ErrorHandler.php`
+- [x] Zaimplementować `set_error_handler()`
+- [x] Zaimplementować `set_exception_handler()`
+- [x] Zaimplementować `register_shutdown_function()`
+- [x] Dodać strukturyzowane logowanie JSON
+- [x] Utworzyć katalog `storage/logs/` (już istnieje)
+- [x] Dodać rotację logów
 - [ ] Zintegrować z Sentry (opcjonalnie)
 
 ---
@@ -259,8 +259,8 @@
 
 ### Tydzień 1-2 (Natychmiastowe)
 1. ✅ README.md (2h) - DONE (2026-02-08)
-2. ⏳ Error Handler (4h) - NEXT
-3. ⏳ PHPUnit Setup (4h)
+2. ✅ Error Handler (4h) - DONE (2026-02-08)
+3. ⏳ PHPUnit Setup (4h) - NEXT
 4. ⏳ Pierwsze testy (8h)
 5. ⏳ CI/CD Pipeline (8h)
 
@@ -282,8 +282,8 @@
 
 **Data rozpoczęcia**: 2026-02-08  
 **Ostatnia aktualizacja**: 2026-02-08  
-**Postęp ogólny**: 1/100+ zadań (1%)  
-**Postęp krytycznych**: 0/24 zadań  
+**Postęp ogólny**: 9/100+ zadań (9%)  
+**Postęp krytycznych**: 7/24 zadań (29%)  
 **Postęp wysokich**: 1/9 zadań (README.md)
 
 ---
