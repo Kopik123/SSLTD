@@ -9,15 +9,17 @@
 ## 1. BŁĘDY I PROBLEMY - KRYTYCZNE (Priorytet 1)
 
 ### 1.1 Brak Testów Jednostkowych
-- [ ] Zainstalować PHPUnit (`composer require --dev phpunit/phpunit`)
-- [ ] Utworzyć katalog `tests/Unit/`
-- [ ] Utworzyć katalog `tests/Integration/`
+- [x] Zainstalować PHPUnit (`composer require --dev phpunit/phpunit`) - częściowo (wymaga access do GitHub)
+- [x] Utworzyć katalog `tests/Unit/`
+- [x] Utworzyć katalog `tests/Integration/`
+- [x] Napisać test dla ErrorHandler
 - [ ] Napisać test dla User model
 - [ ] Napisać test dla AuthController
 - [ ] Napisać test dla CSRF middleware
 - [ ] Napisać test dla Database class
-- [ ] Skonfigurować phpunit.xml
-- [ ] Dodać coverage reporting
+- [x] Skonfigurować phpunit.xml
+- [x] Utworzyć tests/bootstrap.php
+- [ ] Dodać coverage reporting - wymaga pełnej instalacji PHPUnit
 
 ### 1.2 Brak CI/CD Pipeline
 - [ ] Utworzyć `.github/workflows/ci.yml`
@@ -260,9 +262,9 @@
 ### Tydzień 1-2 (Natychmiastowe)
 1. ✅ README.md (2h) - DONE (2026-02-08)
 2. ✅ Error Handler (4h) - DONE (2026-02-08)
-3. ⏳ PHPUnit Setup (4h) - NEXT
-4. ⏳ Pierwsze testy (8h)
-5. ⏳ CI/CD Pipeline (8h)
+3. ✅ PHPUnit Setup (4h) - DONE (2026-02-08) - kompletna konfiguracja, wymaga `composer install`
+4. ⏳ Pierwsze testy (8h) - IN PROGRESS (1/7 testów)
+5. ⏳ CI/CD Pipeline (8h) - NEXT
 
 ### Tydzień 3-4 (Krótkoterminowe)
 6. Dokumentacja API (8h)
@@ -281,10 +283,15 @@
 ## TRACKING
 
 **Data rozpoczęcia**: 2026-02-08  
-**Ostatnia aktualizacja**: 2026-02-08  
-**Postęp ogólny**: 9/100+ zadań (9%)  
-**Postęp krytycznych**: 7/24 zadań (29%)  
+**Ostatnia aktualizacja**: 2026-02-08 13:30  
+**Postęp ogólny**: 15/100+ zadań (15%)  
+**Postęp krytycznych**: 13/24 zadań (54%)  
 **Postęp wysokich**: 1/9 zadań (README.md)
+
+**Uwagi**:
+- PHPUnit wymaga uruchomienia `composer install` w środowisku z dostępem do GitHub
+- Po instalacji PHPUnit: `vendor/bin/phpunit` uruchomi testy
+- Pierwszy test (ErrorHandlerTest) jest gotowy do uruchomienia
 
 ---
 

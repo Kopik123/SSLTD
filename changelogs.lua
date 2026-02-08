@@ -1165,4 +1165,18 @@ return {
       { action = "update", path = "changelogs.lua" },
     },
   },
+  {
+    at = "Sat 02/08/2026 13:30",
+    actor = "codex",
+    summary = "Tests: setup PHPUnit framework with configuration, bootstrap, and first ErrorHandler test.",
+    changes = {
+      { action = "add", path = "composer.json" },
+      { action = "add", path = "phpunit.xml" },
+      { action = "add", path = "tests/bootstrap.php" },
+      { action = "add", path = "tests/Unit/ErrorHandlerTest.php" },
+      { action = "update", path = ".gitignore" },
+      { action = "update", path = "todos_list2.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
 }

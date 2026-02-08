@@ -4,8 +4,17 @@
 !.env.staging.example
 
 storage/logs/*.log
+storage/logs/*.log.gz
 storage/tmp/
+storage/cache/
 
 android/.gradle/
 android/**/build/
 
+# Composer
+/vendor/
+composer.lock
+
+# PHPUnit
+.phpunit.cache/
+.phpunit.result.cache
