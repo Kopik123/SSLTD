@@ -2,10 +2,10 @@
 <?php
 /**
  * Pre-Release QA Guide
- * 
+ *
  * This script provides a guided walkthrough for completing the manual QA checklist.
  * It automates what can be automated and provides instructions for manual steps.
- * 
+ *
  * Usage:
  *   php bin/qa_prerelease.php [--env=.env.staging]
  */
@@ -110,15 +110,15 @@ $totalSections = count($checklist);
 foreach ($checklist as $category => $tasks) {
     echo "[$section/$totalSections] $category\n";
     echo str_repeat('-', 60) . "\n";
-    
+
     foreach ($tasks as $i => $task) {
         echo "  " . ($i + 1) . ". $task\n";
     }
-    
+
     echo "\nPress Enter when you have completed this section (or Ctrl+C to abort): ";
     fgets(STDIN);
     echo "\n";
-    
+
     $section++;
 }
 

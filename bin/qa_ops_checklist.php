@@ -2,10 +2,10 @@
 <?php
 /**
  * QA: Automated Ops Checklist Runner
- * 
+ *
  * This script automates the "Ops" section of the manual test checklist.
  * Run this before manual testing to verify operational health.
- * 
+ *
  * Usage:
  *   php bin/qa_ops_checklist.php [--env=.env.staging]
  */
@@ -26,7 +26,9 @@ foreach ($argv as $arg) {
 if (file_exists(__DIR__ . '/../' . $envFile)) {
     $lines = file(__DIR__ . '/../' . $envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
-        if (strpos(trim($line), '#') === 0) continue;
+        if (strpos(trim($line), '#') === 0) {
+            continue;
+        }
         putenv(trim($line));
     }
 }
@@ -41,10 +43,10 @@ echo "[1/7] Testing /health endpoint...\n";
 try {
     $baseUrl = getenv('APP_URL') ?: 'http://localhost:8000';
     $healthUrl = rtrim($baseUrl, '/') . '/health';
-    
+
     $context = stream_context_create(['http' => ['timeout' => 5]]);
     $response = @file_get_contents($healthUrl, false, $context);
-    
+
     if ($response === false || strpos($response, 'OK') === false) {
         echo "   ❌ FAIL: /health did not return OK\n";
         $allPassed = false;
@@ -61,10 +63,10 @@ echo "[2/7] Testing /health/db endpoint...\n";
 try {
     $baseUrl = getenv('APP_URL') ?: 'http://localhost:8000';
     $healthDbUrl = rtrim($baseUrl, '/') . '/health/db';
-    
+
     $context = stream_context_create(['http' => ['timeout' => 5]]);
     $response = @file_get_contents($healthDbUrl, false, $context);
-    
+
     if ($response === false || strpos($response, 'OK') === false) {
         echo "   ❌ FAIL: /health/db did not return OK\n";
         $allPassed = false;
@@ -98,7 +100,7 @@ try {
     ob_start();
     passthru("php " . escapeshellarg(__DIR__ . '/migrate_status.php') . " --env=" . escapeshellarg($envFile) . " 2>&1", $exitCode);
     $output = ob_get_clean();
-    
+
     if ($exitCode === 0 && strpos($output, 'pending=0') !== false) {
         echo "   ✅ PASS: No pending migrations\n";
     } else {
@@ -118,7 +120,7 @@ if (file_exists(__DIR__ . '/qa_large_files.php')) {
         ob_start();
         passthru("php " . escapeshellarg(__DIR__ . '/qa_large_files.php') . " --env=" . escapeshellarg($envFile) . " 2>&1", $exitCode);
         $output = ob_get_clean();
-        
+
         if ($exitCode === 0 && strpos($output, 'All large file tests passed') !== false) {
             echo "   ✅ PASS: Large file tests passed\n";
         } else {
@@ -140,7 +142,7 @@ if (file_exists(__DIR__ . '/qa_dev_tools.php') && getenv('APP_DEBUG') === '1') {
         ob_start();
         passthru("php " . escapeshellarg(__DIR__ . '/qa_dev_tools.php') . " --env=" . escapeshellarg($envFile) . " 2>&1", $exitCode);
         $output = ob_get_clean();
-        
+
         if ($exitCode === 0 && strpos($output, 'All dev tools tests passed') !== false) {
             echo "   ✅ PASS: Dev tools tests passed\n";
         } else {
