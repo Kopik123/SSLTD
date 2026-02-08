@@ -2,6 +2,7 @@
 
 A comprehensive construction project management system with web portal and Android field app.
 
+[![CI](https://github.com/Kopik123/SSLTD/actions/workflows/ci.yml/badge.svg)](https://github.com/Kopik123/SSLTD/actions/workflows/ci.yml)
 [![PHP Lint](https://img.shields.io/badge/PHP-Lint%20OK-success)]()
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)]()
 [![License](https://img.shields.io/badge/license-Proprietary-red)]()

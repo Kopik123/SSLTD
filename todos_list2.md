@@ -22,10 +22,10 @@
 - [ ] Dodać coverage reporting - wymaga pełnej instalacji PHPUnit
 
 ### 1.2 Brak CI/CD Pipeline
-- [ ] Utworzyć `.github/workflows/ci.yml`
-- [ ] Skonfigurować GitHub Actions dla PHP linting
-- [ ] Skonfigurować GitHub Actions dla testów PHPUnit
-- [ ] Dodać badge statusu CI do README
+- [x] Utworzyć `.github/workflows/ci.yml`
+- [x] Skonfigurować GitHub Actions dla PHP linting
+- [x] Skonfigurować GitHub Actions dla testów PHPUnit
+- [x] Dodać badge statusu CI do README
 - [ ] Skonfigurować automatyczne deployment (opcjonalnie)
 
 ### 1.3 Brak Centralnego Logowania Błędów
