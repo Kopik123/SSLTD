@@ -52,14 +52,15 @@
 - [x] Sprawdzać wymagane rozszerzenia PHP
 
 ### 2.2 Brak Dokumentacji API
-- [ ] Utworzyć `docs/api-spec.yaml` (OpenAPI 3.0)
-- [ ] Udokumentować wszystkie endpointy `/api/auth/*`
-- [ ] Udokumentować endpointy `/api/projects/*`
-- [ ] Udokumentować endpointy `/api/threads/*`
-- [ ] Udokumentować endpointy `/api/uploads`
-- [ ] Udokumentować endpointy `/api/timesheets/*`
-- [ ] Dodać przykłady request/response
-- [ ] Udokumentować kody błędów
+- [x] Utworzyć docs/api-documentation.md (struktura podstawowa)
+- [x] Udokumentować wszystkie endpointy `/api/auth/*`
+- [x] Udokumentować endpointy `/api/projects/*`
+- [x] Udokumentować endpointy `/api/threads/*`
+- [x] Udokumentować endpointy `/api/uploads`
+- [x] Udokumentować endpointy `/api/timesheets/*`
+- [x] Dodać przykłady request/response
+- [x] Udokumentować kody błędów
+- [ ] Utworzyć `docs/api-spec.yaml` (OpenAPI 3.0) - opcjonalnie
 
 ### 2.3 Rate Limiting na Krytycznych Endpointach
 - [ ] Sprawdzić pokrycie rate limiting dla `/api/auth/login`
@@ -132,12 +133,12 @@
 ## 5. CO MOŻNA POPRAWIĆ - BEZPIECZEŃSTWO
 
 ### 5.1 Enhanced CSP Headers
-- [ ] Dodać `X-Frame-Options: DENY`
-- [ ] Dodać `X-Content-Type-Options: nosniff`
-- [ ] Dodać `Referrer-Policy: strict-origin-when-cross-origin`
-- [ ] Dodać `Permissions-Policy`
-- [ ] Przetestować headers w produkcji
-- [ ] Udokumentować security headers
+- [x] Dodać `X-Frame-Options: DENY`
+- [x] Dodać `X-Content-Type-Options: nosniff`
+- [x] Dodać `Referrer-Policy: strict-origin-when-cross-origin`
+- [x] Dodać `Permissions-Policy`
+- [ ] Przetestować headers w produkcji - wymaga środowiska produkcyjnego
+- [x] Udokumentować security headers
 
 ### 5.2 Query Builder
 - [ ] Utworzyć `src/Database/QueryBuilder.php`
@@ -181,12 +182,12 @@
 - [ ] Dodać @throws dla wyjątków
 
 ### 7.2 Architecture Documentation
-- [ ] Utworzyć `docs/architecture.md`
-- [ ] Opisać komponenty systemu
-- [ ] Dodać diagram przepływu requestów
-- [ ] Opisać strukturę katalogów
-- [ ] Udokumentować wzorce projektowe
-- [ ] Dodać diagramy (opcjonalnie)
+- [x] Utworzyć `docs/architecture.md`
+- [x] Opisać komponenty systemu
+- [x] Dodać diagram przepływu requestów
+- [x] Opisać strukturę katalogów
+- [x] Udokumentować wzorce projektowe
+- [x] Dodać diagramy (tekstowe)
 
 ---
 

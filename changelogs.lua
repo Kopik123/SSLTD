@@ -3,6 +3,50 @@
 -- Format: a list of entries; each entry includes time, summary, and changed paths.
 
 return {
+    {
+        version = "0.1.0-alpha.3",
+        date = "2026-02-08",
+        changes = {
+            added = {
+                "SecurityHeadersMiddleware - comprehensive security headers (X-Frame-Options, CSP, HSTS, Permissions-Policy)",
+                "docs/architecture.md - complete system architecture documentation",
+                "docs/api-documentation.md - comprehensive API documentation with examples",
+                "Enhanced security with multiple layers of protection headers",
+                "Detailed request flow diagrams and component architecture",
+                "API endpoint documentation for auth, projects, threads, timesheets, uploads"
+            },
+            changed = {
+                "Updated todos_list2.md progress tracking (39/100+ tasks complete, 39%)"
+            },
+            technical = {
+                "Content-Security-Policy with restrictive defaults",
+                "Permissions-Policy restricting dangerous browser features",
+                "HSTS with preload for production HTTPS",
+                "Comprehensive API specification with request/response examples",
+                "Architecture diagrams showing MVC and middleware flow"
+            }
+        }
+    },
+    {
+        version = "0.1.0-alpha.2",
+        date = "2026-02-08",
+        changes = {
+            added = {
+                "Response helper class (src/Support/Response.php) for standardized HTTP responses",
+                "Validator framework (src/Support/Validator.php) with 13 validation rules",
+                "manual_todos.md documenting 35+ tasks requiring manual intervention",
+                "Comprehensive validation rules: required, email, min, max, numeric, integer, string, alpha, alphanumeric, url, in, regex, confirmed"
+            },
+            changed = {
+                "Updated todos_list2.md progress tracking (31/100+ tasks complete)"
+            },
+            technical = {
+                "Response helpers for JSON, success, error, notFound, unauthorized, forbidden, validationError, serverError, redirect, download",
+                "Fluent validation API with custom error messages",
+                "Standardized error response format across application"
+            }
+        }
+    },
   {
     date = "2026-02-08",
     version = "0.2.0-dev",
