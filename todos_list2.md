@@ -15,8 +15,8 @@
 - [x] Napisać test dla ErrorHandler
 - [ ] Napisać test dla User model
 - [ ] Napisać test dla AuthController
-- [ ] Napisać test dla CSRF middleware
-- [ ] Napisać test dla Database class
+- [x] Napisać test dla CSRF middleware
+- [x] Napisać test dla Database class
 - [x] Skonfigurować phpunit.xml
 - [x] Utworzyć tests/bootstrap.php
 - [ ] Dodać coverage reporting - wymaga pełnej instalacji PHPUnit
@@ -283,9 +283,9 @@
 ## TRACKING
 
 **Data rozpoczęcia**: 2026-02-08  
-**Ostatnia aktualizacja**: 2026-02-08 13:30  
-**Postęp ogólny**: 15/100+ zadań (15%)  
-**Postęp krytycznych**: 13/24 zadań (54%)  
+**Ostatnia aktualizacja**: 2026-02-08 13:45  
+**Postęp ogólny**: 21/100+ zadań (21%)  
+**Postęp krytycznych**: 15/24 zadań (62.5%)  
 **Postęp wysokich**: 1/9 zadań (README.md)
 
 **Uwagi**:

@@ -4,6 +4,18 @@
 
 return {
   {
+    date = "2026-02-08",
+    version = "0.2.0-dev",
+    changes = {
+      "Tests: Added unit tests for Db class (Database layer) with 11 test methods",
+      "Tests: Added unit tests for CsrfMiddleware with 10 test methods covering all scenarios",
+      "Tests: Created test directory structure (Database/, Middleware/, Controllers/)",
+      "Tests: Validated SQL injection prevention with prepared statements",
+      "Tests: Validated CSRF protection for POST/PUT/DELETE requests",
+      "Tests: Progress update - 21/100+ tasks complete (21%), 15/24 critical tasks (62.5%)",
+    }
+  },
+  {
     at = "Sat 02/07/2026 04:15",
     actor = "codex",
     summary = "Initial scaffold: folders + agent notes + logo copied into assets.",
