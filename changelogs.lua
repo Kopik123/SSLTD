@@ -3,6 +3,75 @@
 -- Format: a list of entries; each entry includes time, summary, and changed paths.
 
 return {
+    {
+        version = "0.1.0-alpha.3",
+        date = "2026-02-08",
+        changes = {
+            added = {
+                "SecurityHeadersMiddleware - comprehensive security headers (X-Frame-Options, CSP, HSTS, Permissions-Policy)",
+                "docs/architecture.md - complete system architecture documentation",
+                "docs/api-documentation.md - comprehensive API documentation with examples",
+                "Enhanced security with multiple layers of protection headers",
+                "Detailed request flow diagrams and component architecture",
+                "API endpoint documentation for auth, projects, threads, timesheets, uploads"
+            },
+            changed = {
+                "Updated todos_list2.md progress tracking (39/100+ tasks complete, 39%)"
+            },
+            technical = {
+                "Content-Security-Policy with restrictive defaults",
+                "Permissions-Policy restricting dangerous browser features",
+                "HSTS with preload for production HTTPS",
+                "Comprehensive API specification with request/response examples",
+                "Architecture diagrams showing MVC and middleware flow"
+            }
+        }
+    },
+    {
+        version = "0.1.0-alpha.2",
+        date = "2026-02-08",
+        changes = {
+            added = {
+                "Response helper class (src/Support/Response.php) for standardized HTTP responses",
+                "Validator framework (src/Support/Validator.php) with 13 validation rules",
+                "manual_todos.md documenting 35+ tasks requiring manual intervention",
+                "Comprehensive validation rules: required, email, min, max, numeric, integer, string, alpha, alphanumeric, url, in, regex, confirmed"
+            },
+            changed = {
+                "Updated todos_list2.md progress tracking (31/100+ tasks complete)"
+            },
+            technical = {
+                "Response helpers for JSON, success, error, notFound, unauthorized, forbidden, validationError, serverError, redirect, download",
+                "Fluent validation API with custom error messages",
+                "Standardized error response format across application"
+            }
+        }
+    },
+  {
+    date = "2026-02-08",
+    version = "0.2.0-dev",
+    changes = {
+      "Core: Created Response helper class (src/Support/Response.php) for standardized HTTP responses",
+      "Core: Response helper provides json(), success(), error(), notFound(), unauthorized(), forbidden(), validationError(), serverError() methods",
+      "Core: Response helper provides redirect() and download() methods for common operations",
+      "Core: Created Validator class (src/Support/Validator.php) for centralized validation",
+      "Core: Validator supports 13 validation rules: required, email, min, max, numeric, integer, string, alpha, alphanumeric, url, in, regex",
+      "Core: Validator provides fluent API with validate(), errors(), fails(), passes() methods",
+      "Core: Validator supports custom error messages per field and rule",
+      "Docs: Created CONTRIBUTING.md with development guidelines and contribution process",
+      "Docs: Created CHANGELOG.md following Keep a Changelog format",
+      "Docs: Created manual_todos.md documenting 35+ tasks requiring human intervention",
+      "Tools: Created bin/validate_production.php for production environment validation",
+      "Tools: Production validator checks env config, database, permissions, PHP extensions, security",
+      "Tests: Added unit tests for Db class (Database layer) with 11 test methods",
+      "Tests: Added unit tests for CsrfMiddlewareTest with 10 test methods covering all scenarios",
+      "Tests: Created test directory structure (Database/, Middleware/, Controllers/)",
+      "Tests: Validated SQL injection prevention with prepared statements",
+      "Tests: Validated CSRF protection for POST/PUT/DELETE requests",
+      "Fix: PDO parameter mismatch in SubcontractorsController (moved bind parameter to correct position)",
+      "Progress: 31/100+ tasks complete (31%), 20/24 critical tasks (83%)",
+    }
+  },
   {
     at = "Sat 02/07/2026 04:15",
     actor = "codex",
@@ -1109,6 +1178,81 @@ return {
       { action = "add", path = "bin/cleanup_dev_servers.cmd" },
       { action = "update", path = "bin/rc1_local_staging.php" },
       { action = "update", path = "full_todos.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 01:47",
+    actor = "codex",
+    summary = "Docs: freeze v0.1 scope and acceptance criteria (release gate step 1) - create scope freeze document and mark item complete.",
+    changes = {
+      { action = "add", path = "docs/v0.1_scope_freeze.md" },
+      { action = "update", path = "full_todos.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 01:50",
+    actor = "codex",
+    summary = "Tooling: add QA and release helper scripts to assist with manual testing and release process (items 22-26).",
+    changes = {
+      { action = "add", path = "bin/qa_ops_checklist.php" },
+      { action = "add", path = "bin/qa_prerelease.php" },
+      { action = "add", path = "bin/release_helper.php" },
+      { action = "update", path = "docs/manual_test_checklist.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 12:39",
+    actor = "codex",
+    summary = "Docs: comprehensive project analysis - errors list, improvements, and recommendations.",
+    changes = {
+      { action = "add", path = "docs/project_analysis.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 12:56",
+    actor = "codex",
+    summary = "Docs: create actionable todos_list2.md checklist from project analysis + add comprehensive README.md.",
+    changes = {
+      { action = "add", path = "todos_list2.md" },
+      { action = "add", path = "README.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 13:24",
+    actor = "codex",
+    summary = "Core: implement centralized ErrorHandler with structured logging and log rotation.",
+    changes = {
+      { action = "add", path = "src/ErrorHandler.php" },
+      { action = "add", path = "bin/rotate_logs.php" },
+      { action = "update", path = "index.php" },
+      { action = "update", path = "todos_list2.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 13:36",
+    actor = "codex",
+    summary = "Fix: remove ErrorHandler::init() from index.php - web app already has comprehensive error handling via set_exception_handler().",
+    changes = {
+      { action = "update", path = "index.php" },
+      { action = "update", path = "README.md" },
+      { action = "update", path = "todos_list2.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
+  {
+    at = "Sat 02/08/2026 13:40",
+    actor = "copilot",
+    summary = "CI/CD: add GitHub Actions workflow for automated testing, linting, and security checks.",
+    changes = {
+      { action = "add", path = ".github/workflows/ci.yml" },
+      { action = "update", path = "README.md" },
+      { action = "update", path = "todos_list2.md" },
       { action = "update", path = "changelogs.lua" },
     },
   },

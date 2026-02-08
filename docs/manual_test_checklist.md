@@ -2,6 +2,10 @@
 
 Run these steps on a staging-like environment (fresh DB + fresh uploads folder when possible).
 
+**QUICK START**: Use `php bin/qa_prerelease.php` for a guided walkthrough of this checklist.
+
+**AUTOMATED OPS CHECKS**: Run `php bin/qa_ops_checklist.php` to automate the Ops section below.
+
 ## Web: Auth
 
 - [ ] Register (client) creates account and redirects to portal.

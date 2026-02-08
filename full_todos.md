@@ -161,9 +161,9 @@ Android (Field-first):
 
 ## Release Plan (Checklist)
 
-Status as of 2026-02-07 (local/dev):
+Status as of 2026-02-08 (local/dev):
 
-- [ ] 1. Freeze v0.1 scope and acceptance criteria (what MUST ship vs backlog).
+- [x] 1. Freeze v0.1 scope and acceptance criteria (what MUST ship vs backlog) - See `docs/v0.1_scope_freeze.md`.
 - [x] 2. DB design pass for missing MVP tables (project_members, subcontractors, etc.) and write migrations for MySQL (and SQLite only if still supported).
 - [x] 3. Implement backend API endpoints required by Android MVP (projects, threads/messages, uploads, timesheets).
 - [x] 4. Implement WEB portal modules needed for office usage.
@@ -184,11 +184,11 @@ Status as of 2026-02-07 (local/dev):
 - [x] 19. Large file upload/download testing (automated in dev via `php bin/qa_large_files.php`, validates 9MB OK + 11MB reject + streaming download).
 - [x] 20. Release candidate (RC1) on staging (local prod-like run via `php bin/rc1_local_staging.php`).
 - [x] 21. Run migrations on staging DB + seed minimal admin (done by `bin/rc1_local_staging.php`).
-- [ ] 22. Run manual QA checklist + fix blockers (`docs/manual_test_checklist.md`).
-- [ ] 23. Release.
-- [ ] 24. Tag version + export `mysql.sql` (final) + ship Android signed build (APK/AAB).
-- [ ] 25. Post-release.
-- [ ] 26. Monitor logs, handle hotfixes, create v0.1.1 plan.
+- [ ] 22. Run manual QA checklist + fix blockers (`docs/manual_test_checklist.md`). Helper: `php bin/qa_prerelease.php`
+- [ ] 23. Release preparation. Helper: `php bin/release_helper.php prepare`
+- [ ] 24. Tag version + export `mysql.sql` (final) + ship Android signed build (APK/AAB). Helper: `php bin/release_helper.php export`
+- [ ] 25. Deploy to production. See: `php bin/release_helper.php checklist`
+- [ ] 26. Post-release monitoring. See: `php bin/release_helper.php checklist`
 
 ## Backlog After v0.1 (Phase 2 / v0.2+)
 

@@ -81,3 +81,27 @@ Dev endpoints used by the overlay:
 Safety:
 - disabled when `APP_DEBUG=0`
 - gated to private/LAN IPs; dangerous actions are loopback-only unless `SS_DEV_TOOLS_KEY` is set
+
+## QA and Release Scripts
+
+The `bin/` directory contains several scripts to help with QA and release:
+
+**QA Scripts:**
+- `php bin/qa_ops_checklist.php` - Automated ops health checks (DB, migrations, health endpoints)
+- `php bin/qa_prerelease.php` - Guided walkthrough for manual QA checklist
+- `php bin/qa_large_files.php` - Test upload/download boundaries near 10MB limit
+- `php bin/qa_dev_tools.php` - Test dev tools endpoints (debug mode only)
+
+**Release Scripts:**
+- `php bin/release_helper.php checklist` - Show release checklist (items 23-26)
+- `php bin/release_helper.php prepare` - Run pre-flight checks before release
+- `php bin/release_helper.php export` - Export mysql.sql for release
+
+**Other Utilities:**
+- `php bin/php_lint.php` - PHP syntax check across all source files
+- `php bin/rc1_local_staging.php` - RC1 validation on staging-like environment
+- `php bin/smoke_http.php` - Basic HTTP smoke tests
+- `php bin/find_unchecked_todos.php` - Find unchecked TODOs in full_todos.md
+- `php bin/check_full_todos_done.php` - Check if all TODOs are complete
+
+See `docs/manual_test_checklist.md` and `full_todos.md` for the complete QA and release plan.
