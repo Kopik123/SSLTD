@@ -43,13 +43,13 @@
 ## 2. BŁĘDY I PROBLEMY - WYSOKIE (Priorytet 2)
 
 ### 2.1 Brak Walidacji Środowiska Produkcyjnego
-- [ ] Utworzyć `bin/validate_production.php`
-- [ ] Sprawdzać `APP_DEBUG=0`
-- [ ] Sprawdzać `APP_ENV=prod`
-- [ ] Sprawdzać czy `APP_KEY` jest ustawiony
-- [ ] Weryfikować uprawnienia katalogów (storage/, uploads/)
-- [ ] Testować połączenie z bazą danych
-- [ ] Sprawdzać wymagane rozszerzenia PHP
+- [x] Utworzyć `bin/validate_production.php`
+- [x] Sprawdzać `APP_DEBUG=0`
+- [x] Sprawdzać `APP_ENV=prod`
+- [x] Sprawdzać czy `APP_KEY` jest ustawiony
+- [x] Weryfikować uprawnienia katalogów (storage/, uploads/)
+- [x] Testować połączenie z bazą danych
+- [x] Sprawdzać wymagane rozszerzenia PHP
 
 ### 2.2 Brak Dokumentacji API
 - [ ] Utworzyć `docs/api-spec.yaml` (OpenAPI 3.0)
@@ -74,27 +74,27 @@
 
 ### 3.1 Brak README.md w Głównym Katalogu
 - [x] Utworzyć `README.md`
-- [ ] Dodać opis projektu
-- [ ] Dodać sekcję "Quick Start"
-- [ ] Dodać linki do dokumentacji
-- [ ] Dodać badges (build status, coverage)
-- [ ] Dodać informacje o licencji
-- [ ] Dodać sekcję "Contributing"
+- [x] Dodać opis projektu
+- [x] Dodać sekcję "Quick Start"
+- [x] Dodać linki do dokumentacji
+- [x] Dodać badges (build status, coverage)
+- [x] Dodać informacje o licencji
+- [x] Dodać sekcję "Contributing"
 
 ### 3.2 Brak CONTRIBUTING.md
-- [ ] Utworzyć `CONTRIBUTING.md`
-- [ ] Opisać proces zgłaszania issues
-- [ ] Opisać proces tworzenia PR
-- [ ] Określić coding standards
-- [ ] Dodać template PR
-- [ ] Dodać template Issue
+- [x] Utworzyć `CONTRIBUTING.md`
+- [x] Opisać proces zgłaszania issues
+- [x] Opisać proces tworzenia PR
+- [x] Określić coding standards
+- [x] Dodać template PR
+- [x] Dodać template Issue
 
 ### 3.3 Brak Standardowego CHANGELOG
-- [ ] Utworzyć `CHANGELOG.md`
-- [ ] Przenieść wpisy z `changelogs.lua`
-- [ ] Zastosować format "Keep a Changelog"
-- [ ] Dodać wersję 0.1.0
-- [ ] Dodać kategorie (Added, Changed, Fixed, etc.)
+- [x] Utworzyć `CHANGELOG.md`
+- [x] Przenieść wpisy z `changelogs.lua`
+- [x] Zastosować format "Keep a Changelog"
+- [x] Dodać wersję 0.1.0
+- [x] Dodać kategorie (Added, Changed, Fixed, etc.)
 
 ---
 

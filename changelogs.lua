@@ -7,12 +7,17 @@ return {
     date = "2026-02-08",
     version = "0.2.0-dev",
     changes = {
+      "Docs: Created CONTRIBUTING.md with development guidelines and contribution process",
+      "Docs: Created CHANGELOG.md following Keep a Changelog format",
+      "Tools: Created bin/validate_production.php for production environment validation",
+      "Tools: Production validator checks env config, database, permissions, PHP extensions, security",
       "Tests: Added unit tests for Db class (Database layer) with 11 test methods",
       "Tests: Added unit tests for CsrfMiddleware with 10 test methods covering all scenarios",
       "Tests: Created test directory structure (Database/, Middleware/, Controllers/)",
       "Tests: Validated SQL injection prevention with prepared statements",
       "Tests: Validated CSRF protection for POST/PUT/DELETE requests",
-      "Tests: Progress update - 21/100+ tasks complete (21%), 15/24 critical tasks (62.5%)",
+      "Fix: PDO parameter mismatch in SubcontractorsController (moved bind parameter to correct position)",
+      "Progress: 24/100+ tasks complete (24%), 18/24 critical tasks (75%)",
     }
   },
   {
