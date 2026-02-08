@@ -1122,4 +1122,16 @@ return {
       { action = "update", path = "changelogs.lua" },
     },
   },
+  {
+    at = "Sat 02/08/2026 01:50",
+    actor = "codex",
+    summary = "Tooling: add QA and release helper scripts to assist with manual testing and release process (items 22-26).",
+    changes = {
+      { action = "add", path = "bin/qa_ops_checklist.php" },
+      { action = "add", path = "bin/qa_prerelease.php" },
+      { action = "add", path = "bin/release_helper.php" },
+      { action = "update", path = "docs/manual_test_checklist.md" },
+      { action = "update", path = "changelogs.lua" },
+    },
+  },
 }
