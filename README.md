@@ -1,5 +1,7 @@
 # S&S LTD - Web Portal & Field App
 
+[![CI](https://github.com/Kopik123/SSLTD/actions/workflows/ci.yml/badge.svg)](https://github.com/Kopik123/SSLTD/actions/workflows/ci.yml)
+
 This repository contains the S&S LTD web portal (PHP) and Android field application.
 
 ## Project Structure
