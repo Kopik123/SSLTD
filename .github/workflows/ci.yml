@@ -10,10 +10,15 @@ on:
       - main
       - develop
 
+permissions:
+  contents: read
+
 jobs:
   php-lint:
     name: PHP Lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -30,6 +35,8 @@ jobs:
   php-smoke-tests:
     name: PHP Smoke Tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     services:
       mysql:
         image: mysql:8.0
@@ -96,6 +103,8 @@ jobs:
   android-build:
     name: Android Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -137,6 +146,8 @@ jobs:
   migration-validation:
     name: Validate Migration State
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
