@@ -2,10 +2,41 @@
 
 This project is intended to run in XAMPP on Windows with MySQL.
 
+> **Quick Start:** For an easier setup experience, see [QUICKSTART_PL.md](QUICKSTART_PL.md) (Polish) or run `setup.bat` from the project root.
+>
+> **Main Documentation:** See [README.md](../README.md) for full project overview in both Polish and English.
+
+## Automated Setup (Recommended)
+
+The easiest way to set up the project:
+
+```bat
+cd C:\xampp\htdocs\ss_ltd
+setup.bat
+```
+
+This script will:
+1. Create `.env` from `.env.example`
+2. Create the database
+3. Run migrations
+4. Seed demo data
+5. Verify the setup
+
+Continue reading for manual setup steps.
+
+---
+
+## Manual Setup
+
 ## 1. Create Database
 
-Create an empty database named `ss_ltd` in phpMyAdmin, then import:
-- `mysql.sql`
+Create an empty database named `ss_ltd` in phpMyAdmin, or via command line:
+
+```bat
+C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE ss_ltd CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+```
+
+**Note:** You don't need to import `mysql.sql` manually - the migrations will handle this. The `mysql.sql` file is kept for reference and backup purposes.
 
 ## 2. Configure Environment
 
