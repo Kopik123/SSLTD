@@ -114,7 +114,8 @@ jobs:
       - name: Setup MySQL
         run: |
           sudo systemctl start mysql.service
-          mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS ss_ltd CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+          mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS ss_ltd \
+            CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
