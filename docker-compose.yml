@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  app:
+    image: php:8.3-apache
+    container_name: ssltd_app
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APP_ENV=dev
+      - APP_DEBUG=1
+      - APP_URL=http://localhost:8000
+      - APP_KEY=docker-dev-key-change-in-production
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=ss_ltd
+      - DB_USER=ssltd_user
+      - DB_PASS=ssltd_password
+      - SERVICE_AREA_RADIUS_MILES=60
+    depends_on:
+      db:
+        condition: service_healthy
+    command: >
+      bash -c "
+      apt-get update && apt-get install -y git &&
+      docker-php-ext-install pdo pdo_mysql &&
+      a2enmod rewrite &&
+      sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf &&
+      apache2-foreground
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  db:
+    image: mysql:8.0
+    container_name: ssltd_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ss_ltd
+      MYSQL_USER: ssltd_user
+      MYSQL_PASSWORD: ssltd_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: ssltd_phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ssltd_user
+      PMA_PASSWORD: ssltd_password
+    depends_on:
+      - db
+
+volumes:
+  db_data:

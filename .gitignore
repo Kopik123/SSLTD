@@ -1,11 +1,43 @@
+# Environment files
 .env
 .env.*
 !.env.example
 !.env.staging.example
+!.env.production.example
 
+# Storage
 storage/logs/*.log
 storage/tmp/
+storage/uploads/*
+!storage/uploads/.gitkeep
 
+# Android build artifacts
 android/.gradle/
 android/**/build/
+
+# Node modules (if any JS tooling is added)
+node_modules/
+
+# Composer (if added)
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+.DS_Store?
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Database dumps (except schema)
+*.sql.gz
+backup_*.sql
 

@@ -1,0 +1,50 @@
+# Vercel Deployment Exclusions
+# Exclude unnecessary files to reduce deployment size
+
+# Development files
+.env
+.env.*
+!.env.example
+.git/
+.gitignore
+
+# Documentation
+docs/
+plans/
+*.md
+!README.md
+!DEPLOYMENT_VERCEL.md
+
+# Development tools
+bin/
+database/migrations/
+
+# Android app (separate deployment)
+android/
+
+# Temporary files
+storage/tmp/
+storage/logs/
+*.log
+*.tmp
+
+# Large assets not needed for web
+*.png
+*.jpg
+*.jpeg
+!logo.png
+changelogs.lua
+
+# Build artifacts
+node_modules/
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
