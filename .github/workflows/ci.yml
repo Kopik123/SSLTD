@@ -6,10 +6,15 @@ on:
   pull_request:
     branches: [main, develop]
 
+permissions:
+  contents: read
+
 jobs:
   php-lint:
     name: PHP Lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,6 +31,8 @@ jobs:
   php-smoke-tests:
     name: PHP Smoke Tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -80,6 +87,8 @@ jobs:
   android-build:
     name: Android Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -107,6 +116,8 @@ jobs:
   mysql-schema-check:
     name: MySQL Schema Verification
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -164,6 +175,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [php-lint, php-smoke-tests, android-build, mysql-schema-check]
     if: always()
+    permissions:
+      contents: read
     steps:
       - name: Check all jobs
         run: |
