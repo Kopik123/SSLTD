@@ -151,7 +151,10 @@ Instrukcje budowania aplikacji Android znajdują się w `android/README.md`.
 
 ### 📚 Dodatkowa Dokumentacja
 
-- `docs/setup.md` - Szczegółowe instrukcje instalacji
+- **[docs/QUICKSTART_PL.md](docs/QUICKSTART_PL.md)** - 🇵🇱 Szybki start po polsku
+- **[docs/ENVIRONMENT_COMPARISON.md](docs/ENVIRONMENT_COMPARISON.md)** - Porównanie środowisk (XAMPP vs inne)
+- **[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Rozwiązywanie problemów XAMPP
+- **[docs/setup.md](docs/setup.md)** - Szczegółowe instrukcje instalacji
 - `docs/manual_test_checklist.md` - Lista testów manualnych
 - `docs/background_jobs.md` - Zadania w tle
 - `docs/backups.md` - Tworzenie kopii zapasowych
@@ -180,6 +183,8 @@ Instrukcje budowania aplikacji Android znajdują się w `android/README.md`.
 **Problemy z uprawnieniami do plików:**
 - Upewnij się, że folder `storage/` ma prawa zapisu
 - Na Windowsie zwykle nie jest to problem
+
+**Więcej rozwiązań:** Zobacz [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) dla pełnego przewodnika rozwiązywania problemów
 
 ---
 
@@ -328,7 +333,10 @@ Instructions for building the Android app are in `android/README.md`.
 
 ### 📚 Additional Documentation
 
-- `docs/setup.md` - Detailed installation instructions
+- **[docs/QUICKSTART_PL.md](docs/QUICKSTART_PL.md)** - 🇵🇱 Quick start in Polish
+- **[docs/ENVIRONMENT_COMPARISON.md](docs/ENVIRONMENT_COMPARISON.md)** - Environment comparison (XAMPP vs others)
+- **[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - XAMPP troubleshooting guide
+- **[docs/setup.md](docs/setup.md)** - Detailed installation instructions
 - `docs/manual_test_checklist.md` - Manual testing checklist
 - `docs/background_jobs.md` - Background jobs
 - `docs/backups.md` - Creating backups
@@ -357,6 +365,8 @@ Instructions for building the Android app are in `android/README.md`.
 **File permission issues:**
 - Make sure `storage/` folder has write permissions
 - On Windows, this is usually not an issue
+
+**More solutions:** See [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for complete troubleshooting guide
 
 ---
 
