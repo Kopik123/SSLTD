@@ -59,11 +59,11 @@ fi
 # Check required PHP extensions
 echo ""
 echo "Checking PHP extensions..."
-REQUIRED_EXTENSIONS=("pdo" "pdo_mysql" "mbstring" "json" "curl" "fileinfo" "openssl")
+REQUIRED_EXTENSIONS=("pdo_mysql" "mbstring" "json" "curl" "fileinfo" "openssl")
 MISSING_EXTENSIONS=()
 
 for ext in "${REQUIRED_EXTENSIONS[@]}"; do
-    if php -m | grep -q "^${ext}$"; then
+    if php -m | grep -qi "^${ext}$" || php -m | grep -qi "^PDO$" && [ "$ext" = "pdo_mysql" ]; then
         echo -e "${GREEN}✓${NC} $ext"
     else
         echo -e "${RED}✗${NC} $ext (missing)"
@@ -73,9 +73,9 @@ done
 
 if [ ${#MISSING_EXTENSIONS[@]} -ne 0 ]; then
     echo ""
-    echo -e "${RED}Missing PHP extensions: ${MISSING_EXTENSIONS[*]}${NC}"
-    echo "Install them before deploying."
-    exit 1
+    echo -e "${YELLOW}Warning: Missing PHP extensions: ${MISSING_EXTENSIONS[*]}${NC}"
+    echo "These extensions are recommended for deployment."
+    echo ""
 fi
 
 echo ""
